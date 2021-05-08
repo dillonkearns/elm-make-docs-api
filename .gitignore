@@ -1,2 +1,5 @@
 # Local Netlify folder
 .netlify
+functions/node_modules
+project.tar.gz
+project/

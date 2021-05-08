@@ -90,9 +90,7 @@ function generateDocs() {
       console.log("Success!", { tmpdir });
 
       console.log(
-        execSync(
-          `cd ${outDir} && ELM_HOME=/tmp npx elm make --docs docs.json`
-        ).toString()
+        execSync(`cd ${outDir} && npx elm make --docs docs.json`).toString()
       );
       resolve(fs.readFileSync(path.join(outDir, "docs.json")).toString());
 

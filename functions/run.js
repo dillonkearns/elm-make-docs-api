@@ -23,7 +23,7 @@ function generateDocs() {
   // return execSync(`curl --output project.tar.gz --location --remote-header-name --remote-name https://github.com/dillonkearns/elm-rss/tarball/master && tar xvzf project.tar.gz && tar xvzf project.tar.gz -C project --strip-components=1 && cd project && npx elm make --docs docs.json`)
   return new Promise((resolve, reject) => {
     // var tmpdir = os.tmpdir();
-    const tmpdir = "./";
+    const tmpdir = "/tmp";
 
     // if(!fs.existsSync(tmpdir)) {
     //     fs.mkdirSync(tmpdir);

@@ -12,7 +12,7 @@ exports.handler = async function (request) {
   return {
     statusCode: 200,
     headers: {
-      // 'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
     body: await generateDocs(),
     // body: fs.readFileSync('project/docs.json').toString()
@@ -92,7 +92,7 @@ function generateDocs() {
       console.log(
         execSync(`cd ${outDir} && npx elm make --docs docs.json`).toString()
       );
-      resolve(fs.readFileSync(path.join(outDir, "docs.json")));
+      resolve(fs.readFileSync(path.join(outDir, "docs.json")).toString());
 
       // let uncomp = path.join(tmpdir, base);
       // var dist = path.join(tmpdir, 'openrpg');

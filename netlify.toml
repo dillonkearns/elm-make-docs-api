@@ -1,4 +1,5 @@
 # example netlify.toml
 [build]
+  command = "cd functions/ && npm i"
   functions = "functions"
   publish = "."

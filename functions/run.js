@@ -79,7 +79,7 @@ function generateDocs() {
       const comp = fs.createReadStream(download);
 
       const outDir = path.join(tmpdir, "elm-make-docs-api-download");
-      fs.mkdirSync(outDir, { recursive: true });
+      fs.mkdirSync(outDir);
 
       tar.extract({
         cwd: outDir,
